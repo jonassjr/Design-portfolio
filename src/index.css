@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:focus {
+  box-shadow: 0 0 0 2px #ef4444;
+  outline: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  @apply bg-stone-900 text-stone-300;
+}
+
+body::-webkit-scrollbar {
+  width: 0.85rem;
+}
+
+body::-webkit-scrollbar-track {
+  @apply bg-stone-800;
+}
+
+body::-webkit-scrollbar-thumb {
+  @apply bg-stone-700 rounded-sm;
+}
+
+input,
+textarea {
+  background: none;
+}
+
+@layer components {
+  .max-container {
+    max-width: 1120px;
+    margin: 0 auto;
+  }
+}
+
+@layer utilities {
+  .padding-y {
+    @apply py-8 md:py-24;
+  }
+
+  .padding-x {
+    @apply ss:px-16 px-4;
+  }
+}
